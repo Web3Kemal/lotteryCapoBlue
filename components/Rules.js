@@ -19,6 +19,9 @@ const Rules = () => {
         <div className={style.rule}>
           Example: if there are 100 entries, the winner gets 9.5 BNB! 5% will go to BLUE & CAPO marketing wallet.
         </div>
+        <div className={style.rule}>
+          CA: 0x....
+        </div>
         {/* Add more rules as needed */}
       </div>
     );
