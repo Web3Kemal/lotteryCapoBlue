@@ -10,6 +10,9 @@ contract Lottery {
     uint public lotteryId;
     uint public marketingTaxPercentage = 5; 
 
+  
+    uint256 public ENTRY_FEE = 0.1 ether;
+
     constructor(address payable _marketing) {
         owner = msg.sender;
         marketing = _marketing;
@@ -29,9 +32,8 @@ contract Lottery {
     }
 
     function enter() public payable {
-        require(msg.value >= .01 ether);
+        require(msg.value == ENTRY_FEE, "Entry fee is 0.1 BNB");
 
-        
         players.push(payable(msg.sender));
     }
 
@@ -43,22 +45,19 @@ contract Lottery {
         return lotteryId;
     }
 
-
-     function pickWinner() public onlyOwner {
+    function pickWinner() public onlyOwner {
         uint randomIndex = getRandomNumber() % players.length;
 
        
         uint marketingTax = (address(this).balance * marketingTaxPercentage) / 100;
         marketing.transfer(marketingTax);
 
-        
-        uint winnerAmount = address(this).balance;  
+        uint winnerAmount = address(this).balance;
         players[randomIndex].transfer(winnerAmount);
         
         winners.push(players[randomIndex]);
         lotteryId++;
 
-        
         players = new address payable[](0);
     }
 
