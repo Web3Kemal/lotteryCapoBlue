@@ -11,13 +11,13 @@ const Rules = () => {
           Enter the game with 0.1 BNB, you can enter multiple times! The winner gets all the BNB!
         </div>
         <div className={style.rule}>
-          The more you bet, the more chances to win! <i>Technical explanation: the entries are pushed into an array that saves each address, there can be multiple instances of the same address in the array, thus allowing statistically higher chances to win. Exampe: CZ bets 10 times himself with the same wallet and Cardano team - 10 different people - bets 10 times 1 time each player. In this case, CZ has higher chances to win, exactly at 50%.</i>
+          The more you bet, the more chances to win! <i>Example: CZ bets 10 times himself with the same wallet and Cardano team - 10 different people - bets 10 times 1 time each player. In this case, CZ has higher chances to win, exactly at 50%.</i>
         </div>
         <div className={style.rule}>
         Every day at 1 PM UTC there will be a random pick of the winner!
         </div>
         <div className={style.rule}>
-          Example: if there are 100 entries, the winner gets 10 BNB!
+          Example: if there are 100 entries, the winner gets 9.5 BNB! 5% will go to BLUE & CAPO marketing wallet.
         </div>
         {/* Add more rules as needed */}
       </div>
