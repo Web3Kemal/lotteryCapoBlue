@@ -1,0 +1,47 @@
+.wrapper {
+  background:linear-gradient(270deg, rgba(250,215,22,255), rgb(17, 112, 219));
+  width: 100%;
+  min-height: 50px;
+  color: #f1f1f3;
+  display: flex;
+  align-items: center;
+  padding: 5px; /* Reduced padding for mobile */
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  margin-left: 10px; /* Reduced margin for mobile */
+  font-size: 1.5rem; /* Reduced font size for mobile */
+  cursor: pointer;
+  font-weight: bolder;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.loginBtn {
+  margin-right: 10px; /* Reduced margin for mobile */
+  font-size: 0.9rem; /* Reduced font size for mobile */
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  background: linear-gradient(90deg, rgba(250,215,22,255), rgb(17, 112, 219));
+  border-radius: 1.5rem;
+  padding: 5px; /* Reduced padding for mobile */
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+.welcome {
+  font-size: 0.9rem; /* Reduced font size for mobile */
+  font-weight: bolder;
+}
+
+.accentColor {
+  color: #f2505e;
+  font-weight: bold;
+}

@@ -1,0 +1,44 @@
+.wrapper {
+    background: linear-gradient(90deg, rgba(250,215,22,255), rgb(17, 112, 219));
+    min-height: 100px; 
+    width: 95%; /* Full width for mobile, same as table's wrapper */
+    margin: 0 auto;
+    border-radius: 2rem; /* Same as table's wrapper */
+    box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.75); /* Same as table's wrapper */
+    display: flex;
+    padding: 10px; /* Increased padding to match table's wrapper */
+    flex-direction: column;
+    margin-top: 20px; /* Same as table's wrapper */
+    color: #fff; /* added for white text color */
+    text-align: center; /* added for center alignment */
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  
+  .rule {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Larger devices */
+  @media (min-width: 600px) {
+    .wrapper {
+      width: 80%; /* 80% for larger screens */
+      max-width: 50%; /* 50% for larger screens */
+      margin-top: 50px; /* larger margin for larger screens */
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); /* larger box shadow for larger screens */
+    }
+    
+    .title {
+      font-size: 2rem; /* larger font size for larger screens */
+    }
+  
+    .rule {
+      font-size: 1.5rem; /* larger font size for larger screens */
+      margin-bottom: 20px; /* larger margin for larger screens */
+    }
+  }
+  

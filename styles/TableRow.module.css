@@ -1,0 +1,39 @@
+.wrapper {
+  width: 100%;
+  background-color: #1e222d;
+  border-top: 1px solid #31353e;
+  border-bottom: 1px solid #31353e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px; /* Reduce padding for mobile */
+  flex-wrap: wrap; /* Add this to make the children wrap into multiple rows if necessary */
+}
+
+.wrapper:last-child {
+  border-bottom: none;
+}
+
+.address, .ethAmmount {
+  color: #fff;
+  font-size: 14px; /* Reduce font size on smaller screens */
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  width: 100%; /* Full width on small screens */
+}
+
+.goldAccent {
+  color: #ffde3c;
+}
+
+/* Larger devices */
+@media (min-width: 600px) {
+  .wrapper {
+    padding: 20px 40px; /* larger padding for larger screens */
+  }
+
+  .address, .ethAmmount {
+    font-size: 16px; /* larger font size for larger screens */
+  }
+}
