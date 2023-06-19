@@ -28,7 +28,7 @@ const Rules = () => {
         Example: if there are 100 entries, the winner gets 9.5 BNB! 5% will go to BLUE & CAPO marketing wallet.
       </div>
       <div className={style.rule}>
-        CA: <button onClick={copyToClipboard}>0xb2F07B9d910BD9D8d59f865eb38367D5c2b2423f</button>
+        CA: 0xb2F07B9d910BD9D8d59f865eb38367D5c2b2423f
       </div>
     </div>
   );
