@@ -16,19 +16,19 @@ const Rules = () => {
         How To Play
       </div>
       <div className={style.rule}>
-        Enter the game with 0.1 BNB, you can enter multiple times! The winner gets all the BNB!
+        Enter the game with 100,000 BLUE, you can enter multiple times! The winner gets all the BLUE!
       </div>
       <div className={style.rule}>
-        The more you bet, the more chances to win! <i>Example: CZ bets 10 times himself with the same wallet and Cardano team - 10 different people - bets 10 times 1 time each player. In this case, CZ has higher chances to win, exactly at 50%.</i>
+        Maximum partecipants for each game is 20! After 20 entries, wait for the random winner pick!
       </div>
       <div className={style.rule}>
-        Every day at 1 PM UTC there will be a random pick of the winner!
+        The random winner pick could range from multiple times a day, depending on how many enter.
       </div>
       <div className={style.rule}>
-        Example: if there are 100 entries, the winner gets 9.5 BNB! 5% will go to BLUE & CAPO marketing wallet.
+        For the winner there is a 5% tax that will be burned, giving deflationary utility to blue!
       </div>
       <div className={style.rule}>
-        CA: <button onClick={copyToClipboard}>0xb2F07B9d910BD9D8d59f865eb38367D5c2b2423f</button>
+        CA: <button onClick={copyToClipboard}>0x212342a52B00c8C0EBFCd00534069B58Fa6fbF7C</button>
       </div>
     </div>
   );

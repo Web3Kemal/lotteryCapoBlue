@@ -24,7 +24,7 @@ const TableRow = ({ player }) => {
         {isTruncated ? truncateEthAddress(player) : player}
       </div>
       <div className={style.ethAmmount}>
-        <span className={style.goldAccent}>+0.1 BNB</span>
+        <span className={style.goldAccent}>+100,000 BLUE</span>
       </div>
     </div>
   )
