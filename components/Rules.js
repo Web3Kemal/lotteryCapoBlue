@@ -19,7 +19,7 @@ const Rules = () => {
         Enter the game with 100,000 BLUE, you can enter multiple times! The winner gets all the BLUE!
       </div>
       <div className={style.rule}>
-        Maximum partecipants for each game is 20! After 20 entries, wait for the random winner pick!
+        Maximum participants for each game is 20! After 20 entries, wait for the random winner pick!
       </div>
       <div className={style.rule}>
         The random winner pick could range from multiple times a day, depending on how many enter.
