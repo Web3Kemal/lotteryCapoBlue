@@ -30,6 +30,9 @@ const Rules = () => {
       <div className={style.rule}>
         CA: <button onClick={copyToClipboard}>0x212342a52B00c8C0EBFCd00534069B58Fa6fbF7C</button>
       </div>
+      <div className={style.rule}>
+        Made with 💙 by <a href="https://twitter.com/Web3Kemal" target="_blank" rel="noopener noreferrer">@Web3Kemal</a>
+      </div>
     </div>
   );
 }
