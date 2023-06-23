@@ -28,7 +28,7 @@ const Rules = () => {
         For the winner there is a 5% tax that will be burned, giving deflationary utility to blue!
       </div>
       <div className={style.rule}>
-        To play the game if you are on mobile, you need to open the website from the internal browser of MetaMask, then you will be able to connect the wallet.
+        To play the game if you are on mobile, you need to open the website from the internal browser of MetaMask, then you will be able to connect the wallet. Remember to be on BSC chain to connect!
       </div>
       <div className={style.rule}>
         CA: <button onClick={copyToClipboard}>0x212342a52B00c8C0EBFCd00534069B58Fa6fbF7C</button>
