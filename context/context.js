@@ -2,19 +2,19 @@ import { createContext, useState, useEffect, useContext } from 'react'
 import Web3 from 'web3'
 import createLotteryContract from '../utils/lottery'
 import createTokenContract from '../utils/token'
+
 export const appContext = createContext()
 
 export const AppProvider = ({ children }) => {
-  const [web3, setWeb3] = useState()
+  const [web3, setWeb3] = useState(new Web3(Web3.givenProvider || 'https://bsc-dataseed.binance.org/'))
   const [address, setAddress] = useState('')
-  const [lotteryContract, setLotteryContract] = useState()
+  const [lotteryContract, setLotteryContract] = useState(createLotteryContract(web3))
   const [lotteryPot, setLotteryPot] = useState()
   const [lotteryPlayers, setPlayers] = useState([])
   const [lastWinner, setLastWinner] = useState([])
   const [lotteryId, setLotteryId] = useState()
   const [etherscanUrl, setEtherscanUrl] = useState()
-  const [tokenContract, setTokenContract] = useState()
-
+  const [tokenContract, setTokenContract] = useState(createTokenContract(web3))
 
   useEffect(() => {
     updateLottery()
@@ -40,23 +40,12 @@ export const AppProvider = ({ children }) => {
   }
 
   const enterLottery = async () => {
-    /* try {
-      console.log('entering lottery')
-      await lotteryContract.methods.enter().send({
-        from: address,
-        // 0.1 BNB in Wei
-        value: '100000000000000000',
-        // 0.0003 ETH in Gwei
-        gas: 300000,
-        gasPrice: null,
-      })
-      updateLottery()
-    } catch (err) {
-      console.log(err, 'enter')
-    } */
+    if (!address) {
+      console.log('Please connect wallet');
+      return;
+    }
     try {
       console.log('entering lottery');
-      console.log(tokenContract);
       const amountToApprove = web3.utils.toWei('100000', 'ether'); // 100,000 tokens
       await tokenContract.methods.approve(lotteryContract._address, amountToApprove).send({
         from: address
@@ -75,6 +64,10 @@ export const AppProvider = ({ children }) => {
   }
 
   const pickWinner = async () => {
+    if (!address) {
+      console.log('Please connect wallet');
+      return;
+    }
     try {
       let tx = await lotteryContract.methods.pickWinner().send({
         from: address,
@@ -99,16 +92,10 @@ export const AppProvider = ({ children }) => {
       try {
         /* request wallet connection */
         await window.ethereum.request({ method: 'eth_requestAccounts' })
-        /* create web3 instance & set to state */
-        const web3 = new Web3(window.ethereum)
-        /* set web3 instance in React state */
-        setWeb3(web3)
         /* get list of accounts */
         const accounts = await web3.eth.getAccounts()
         /* set account 1 to React state */
         setAddress(accounts[0])
-        setTokenContract(createTokenContract(web3))
-        setLotteryContract(createLotteryContract(web3))
         window.ethereum.on('accountsChanged', async () => {
           const accounts = await web3.eth.getAccounts()
 
