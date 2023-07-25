@@ -6,8 +6,8 @@ const Table = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.tableHeader}>
-        <div className={style.addressTitle}>💳 User Address</div>
-        <div className={style.amountTitle}>💲 Amount</div>
+        <div className={style.addressTitle}>💳 User Address</div>{/* 
+        <div className={style.amountTitle}>💲 Amount</div> */}
       </div>
       <div className={style.rows}>
         {lotteryPlayers.length > 0 ? (
