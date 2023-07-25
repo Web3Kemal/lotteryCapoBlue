@@ -19,7 +19,11 @@ const Rules = () => {
         Enter the game with 0.1 BNB, you can enter multiple times! The winner gets all the BNB!
       </div>
       <div className={style.rule}>
+<<<<<<< HEAD
         Wait for the random winner pick everyday at 1 PM UTC!
+=======
+        Maximum partecipants for each game is 20! After 20 entries, wait for the random winner pick!
+>>>>>>> parent of 85b8b8b (Update Rules.js)
       </div>
       <div className={style.rule}>
         For the winner there is a 5% tax that will be used for marketing!
