@@ -3,8 +3,8 @@ import style from '../styles/Rules.module.css';
 
 const Rules = () => {
   const copyToClipboard = () => {
-    navigator.clipboard.writeText('0xb2F07B9d910BD9D8d59f865eb38367D5c2b2423f').then(function() {
-      alert('Copied the text: 0xb2F07B9d910BD9D8d59f865eb38367D5c2b2423f');
+    navigator.clipboard.writeText('0xb01d852Ad6F84a7E2065aFEC5D0e801DE0bFa0B9').then(function() {
+      alert('Copied the text: 0xb01d852Ad6F84a7E2065aFEC5D0e801DE0bFa0B9');
     }, function(err) {
       console.error('Could not copy text: ', err);
     });
@@ -16,26 +16,24 @@ const Rules = () => {
         How To Play
       </div>
       <div className={style.rule}>
-        Enter the game with 100,000 BLUE, you can enter multiple times! The winner gets all the BLUE!
+        Enter the game with 0.1 BNB, you can enter multiple times! The winner gets all the BNB!
       </div>
       <div className={style.rule}>
-        Maximum participants for each game is 20! After 20 entries, wait for the random winner pick!
+<<<<<<< HEAD
+        Wait for the random winner pick everyday at 1 PM UTC!
+=======
+        Maximum partecipants for each game is 20! After 20 entries, wait for the random winner pick!
+>>>>>>> parent of 85b8b8b (Update Rules.js)
       </div>
       <div className={style.rule}>
-        The random winner pick could range from multiple times a day, depending on how many enter.
-      </div>
-      <div className={style.rule}>
-        For the winner there is a 5% tax that will be burned, giving deflationary utility to blue!
+        For the winner there is a 5% tax that will be used for marketing!
       </div>
       <div className={style.rule}>
         To play the game if you are on mobile, you need to open the website from the internal browser of MetaMask, then you will be able to connect the wallet. Remember to be on BSC chain to connect!
       </div>
-      <div className={style.rule}>
-        CA: <button onClick={copyToClipboard}>0x212342a52B00c8C0EBFCd00534069B58Fa6fbF7C</button>
-      </div>
-      <div className={style.rule}>
-        Made with 💙 by <a href="https://twitter.com/Web3Kemal" target="_blank" rel="noopener noreferrer">@Web3Kemal</a>
-      </div>
+      {/* <div className={style.rule}>
+        CA: <button onClick={copyToClipboard}>0xb01d852Ad6F84a7E2065aFEC5D0e801DE0bFa0B9</button>
+      </div> */}
     </div>
   );
 }

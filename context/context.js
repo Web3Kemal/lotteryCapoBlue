@@ -13,8 +13,8 @@ export const AppProvider = ({ children }) => {
   const [lotteryPlayers, setPlayers] = useState([])
   const [lastWinner, setLastWinner] = useState([])
   const [lotteryId, setLotteryId] = useState()
-  const [etherscanUrl, setEtherscanUrl] = useState()
-  const [tokenContract, setTokenContract] = useState(createTokenContract(web3))
+  const [etherscanUrl, setEtherscanUrl] = useState()/* 
+  const [tokenContract, setTokenContract] = useState(web3.eth.contract([]).at('0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c')) */
 
   useEffect(() => {
     updateLottery()
@@ -46,13 +46,15 @@ export const AppProvider = ({ children }) => {
     }
     try {
       console.log('entering lottery');
-      const amountToApprove = web3.utils.toWei('100000', 'ether'); // 100,000 tokens
-      await tokenContract.methods.approve(lotteryContract._address, amountToApprove).send({
+      const amountToSend = web3.utils.toWei('0.1', 'ether'); // 0.1 BNB
+      /* await tokenContract.methods.approve(lotteryContract._address, amountToApprove).send({
         from: address
-      });
+      }); */
   
-      await lotteryContract.methods.enter().send({
+      await web3.eth.sendTransaction({
         from: address,
+        to: lotteryContract._address,
+        value: amountToSend,
         gas: 300000,
         gasPrice: null,
       });

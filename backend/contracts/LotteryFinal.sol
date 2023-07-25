@@ -11,7 +11,7 @@ contract Lottery {
     address[] public winners;
     uint public lotteryId;
     uint public marketingTaxPercentage = 5; 
-    uint public maxPlayers = 20; 
+    uint public maxPlayers = 50; 
     IERC20 public token;
 
     uint256 public ENTRY_FEE = 100000 * 10**18; // Consider the decimal places of the token
